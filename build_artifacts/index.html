@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to RockyVille!</title>
+	<title>Picture Upload</title>
 </head>
 <body>
-    <h1>Welcome to RockyVille!</h1>
+	<h1>Welcome to RockyVille!</h1>
+	<form action="upload.php" method="post" enctype="multipart/form-data">
+		<label for="file">Select a picture:</label>
+		<input type="file" id="file" name="file"><br><br>
+		<input type="submit" value="Upload">
+	</form>
     <p>Thanks for visiting!</p>
+	<p id="datetime"></p>
+	<script>
+		var dt = new Date();
+		document.getElementById("datetime").innerHTML = dt.toLocaleString();
+	</script>
+
 </body>
 </html>
